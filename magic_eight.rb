@@ -31,12 +31,13 @@ class MagicEight
   def get_input
     puts "Enter QUIT to leave."
     sleep 1
-    puts "What is you question?"
+    puts "What is your question?"
     choice = gets.chomp
       if choice == "QUIT"
         puts "Thanks for playing."
       else
         output_random
+        sleep 1
         get_input
       end
 
