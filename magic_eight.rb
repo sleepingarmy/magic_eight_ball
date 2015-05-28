@@ -7,6 +7,7 @@
 class MagicEight
 
   def welcome
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     puts "Welcome to the Magic Eightball"
     puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
     get_input
