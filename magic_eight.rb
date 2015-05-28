@@ -6,8 +6,13 @@
 # Computer outputs a goodbye message and exits – (push & switch drivers)
 class MagicEight
 
-  def get_input
+  def welcome
     puts "Welcome to the Magic Eightball"
+    puts "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"
+    get_input
+  end 
+
+  def get_input
     puts "Enter QUIT to leave."
     sleep 1
     puts "What is you question?"
@@ -16,6 +21,7 @@ class MagicEight
         puts "Thanks for playing."
       else
         output_random
+        get_input
       end
 
   end
@@ -46,4 +52,4 @@ class MagicEight
   end
 end
 
-MagicEight.new.get_input
+MagicEight.new.welcome
