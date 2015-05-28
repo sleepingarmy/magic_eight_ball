@@ -7,15 +7,23 @@
 class MagicEight
 
   choice = gets.chomp
+ 
+  
   def get_input
     puts "Welcome to the Magic Eightball"
     puts "What is you question?"
+    sleep 1
+    puts "Enter QUIT to leave."
     choice = gets.chomp
+      if choice == "QUIT"
+        puts "Thanks for playing."
+      end
+
   end
 
   def output_random
     answers = ["It is certain", 
-      "It is decidedly so", 
+    "It is decidedly so", 
     "Without a doubt", 
     "Yes definitely", 
     "You may realy on it", 
@@ -35,7 +43,10 @@ class MagicEight
     "Outlook not so good", 
     "Very doubtful"]
     output = answers.sample
-    put "#{ output }"
+    put "#{output}"
+  
+
   end
+
   
 end
