@@ -6,17 +6,16 @@
 # Computer outputs a goodbye message and exits – (push & switch drivers)
 class MagicEight
 
-  choice = gets.chomp
- 
-  
   def get_input
     puts "Welcome to the Magic Eightball"
-    puts "What is you question?"
-    sleep 1
     puts "Enter QUIT to leave."
+    sleep 1
+    puts "What is you question?"
     choice = gets.chomp
       if choice == "QUIT"
         puts "Thanks for playing."
+      else
+        output_random
       end
 
   end
@@ -43,10 +42,8 @@ class MagicEight
     "Outlook not so good", 
     "Very doubtful"]
     output = answers.sample
-    put "#{output}"
-  
-
+    puts "#{output}"
   end
-
-  
 end
+
+MagicEight.new.get_input
